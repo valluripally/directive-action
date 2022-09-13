@@ -2,6 +2,23 @@
  directive added 
 </p>
 
-<p appBetterHighlight>
-  better highlight
+<p appBetterHighlight [defaultColor]="'yellow'" [highlightColor]="'red'">
+ with property binding
 </p>
+
+<p appBetterHighlight >
+ with default values
+</p>
+
+<div *appUnless="false">
+ using custom structural directive which is the exact opposite of the *ngIf
+</div>
+
+<input type="text" name="value"  [(ngModel)] ="value">
+
+
+<div [ngSwitch]="value">
+  <p *ngSwitchCase="2">value is 2</p>
+  <p *ngSwitchCase="5">value is 5</p>
+  <p *ngSwitchDefault> value is default</p>
+</div>
